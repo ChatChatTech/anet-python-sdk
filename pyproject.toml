@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentnetwork"
+version = "1.1.0"
+description = "AgentNetwork Python SDK — REST + P2P service-gateway client for the anet daemon"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "ChatChatTech", email = "dev@agentnetwork.org.cn"},
+]
+maintainers = [
+    {name = "ChatChatTech", email = "dev@agentnetwork.org.cn"},
+]
+keywords = [
+    "agent",
+    "agentnetwork",
+    "p2p",
+    "libp2p",
+    "did",
+    "decentralized",
+    "multi-agent",
+    "sdk",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Distributed Computing",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+    "Typing :: Typed",
+]
+dependencies = ["httpx>=0.25.0"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21",
+    "build>=1.0",
+    "twine>=4.0",
+]
+
+[project.urls]
+Homepage = "https://agentnetwork.org.cn"
+Documentation = "https://agentnetwork.org.cn/SKILL.md"
+Repository = "https://github.com/ChatChatTech/anet-python-sdk"
+Issues = "https://github.com/ChatChatTech/anet-python-sdk/issues"
+Changelog = "https://github.com/ChatChatTech/anet-python-sdk/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["anet*"]
+exclude = ["tests*", "tests.*"]

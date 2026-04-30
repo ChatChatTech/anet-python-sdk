@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: AgentNetwork docs / SKILL.md
+    url: https://agentnetwork.org.cn/SKILL.md
+    about: Read the canonical agent skill before opening an issue.
+  - name: AgentNetwork community
+    url: https://agentnetwork.org.cn
+    about: Project home, news, and contact.
