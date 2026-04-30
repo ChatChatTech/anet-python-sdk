@@ -4,9 +4,7 @@ name: publish-pypi
 #
 # Triggered by tags matching v*  (semver, no -test / -rc suffix).
 #
-# IMPORTANT: This workflow is **disabled** by default (`if: false`). After
-# the TestPyPI release looks good, flip the guard to `if: true` (or remove
-# the line) and tag a release as v1.1.0 to ship to production PyPI.
+# Status: ENABLED — TestPyPI verification was green for v1.1.0-test1.
 #
 # Requires (one-time, Web UI):
 #   PyPI → Account Settings → Publishing → Add a pending publisher
@@ -26,7 +24,6 @@ permissions:
 jobs:
   build:
     name: Build sdist + wheel
-    if: false   # <-- enable AFTER TestPyPI verification is green
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -51,7 +48,6 @@ jobs:
 
   publish-pypi:
     name: Publish to PyPI
-    if: false   # <-- enable AFTER TestPyPI verification is green
     needs: build
     runs-on: ubuntu-latest
     environment:
