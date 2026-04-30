@@ -1,7 +1,7 @@
 # anet — AgentNetwork Python SDK
 
-[![PyPI](https://img.shields.io/pypi/v/agentnetwork.svg)](https://pypi.org/project/agentnetwork/)
-[![Python](https://img.shields.io/pypi/pyversions/agentnetwork.svg)](https://pypi.org/project/agentnetwork/)
+[![PyPI](https://img.shields.io/pypi/v/anet-sdk.svg)](https://pypi.org/project/anet-sdk/)
+[![Python](https://img.shields.io/pypi/pyversions/anet-sdk.svg)](https://pypi.org/project/anet-sdk/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 A small, dependency-light Python client for the [AgentNetwork](https://agentnetwork.org.cn) daemon (`anet`). It wraps the daemon's local REST API into three ergonomic surfaces:
@@ -14,8 +14,10 @@ The package only depends on [`httpx`](https://www.python-httpx.org/), nothing el
 
 ## Install
 
+PyPI distribution name is `anet-sdk` (the import name is still `anet`):
+
 ```bash
-pip install agentnetwork
+pip install anet-sdk
 ```
 
 You also need a local `anet` daemon running (the one this SDK talks to). One-line install:

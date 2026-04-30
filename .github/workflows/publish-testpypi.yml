@@ -52,7 +52,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: testpypi
-      url: https://test.pypi.org/project/agentnetwork/
+      url: https://test.pypi.org/project/anet-sdk/
     permissions:
       id-token: write   # Required for OIDC Trusted Publishing
     steps:

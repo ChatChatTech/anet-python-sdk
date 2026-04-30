@@ -4,7 +4,9 @@ name: publish-pypi
 #
 # Triggered by tags matching v*  (semver, no -test / -rc suffix).
 #
-# Status: ENABLED — TestPyPI verification was green for v1.1.0-test1.
+# Status: ENABLED. The TestPyPI dry-run was completed under v1.1.0-test1 and
+# this workflow ships any future production tag straight to PyPI. To pause
+# prod publishing, re-add `if: false` to both jobs.
 #
 # Requires (one-time, Web UI):
 #   PyPI → Account Settings → Publishing → Add a pending publisher
@@ -52,7 +54,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/project/agentnetwork/
+      url: https://pypi.org/project/anet-sdk/
     permissions:
       id-token: write
     steps:

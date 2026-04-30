@@ -1,12 +1,18 @@
 # Changelog
 
-All notable changes to **anet** (PyPI: `agentnetwork`) are recorded here.
+All notable changes to **anet** (PyPI: `anet-sdk`) are recorded here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and the project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [1.1.0] — 2026-04-30
 
 First public release on PyPI.
+
+> **Note on the package name.** The PyPI distribution is published as
+> `anet-sdk`. PyPI's own `anet` (a 2025-10 placeholder) and `agentnetwork`
+> (rejected by PyPI's similarity policy vs. an unrelated `agentnet`
+> project) were both unavailable, so we ship under `anet-sdk`. The
+> Python import name is unchanged: `from anet.svc import SvcClient`.
 
 ### Added
 - **`anet.AgentNetwork`** — synchronous REST client covering the daemon's
